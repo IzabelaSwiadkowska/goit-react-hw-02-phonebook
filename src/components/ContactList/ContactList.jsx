@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserXmark } from '@fortawesome/free-solid-svg-icons';
 import styles from './ContactList.module.css';
+import propTypes from 'prop-types';
 
 class ContactList extends Component {
   render() {
@@ -24,4 +25,9 @@ class ContactList extends Component {
     );
   }
 }
+ContactList.propTypes = {
+  name: propTypes.string,
+  number: propTypes.number,
+  deleteContact: propTypes.func,
+};
 export default ContactList;
